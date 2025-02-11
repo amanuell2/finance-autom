@@ -1,0 +1,195 @@
+---
+---
+
+<div class="dashboard">
+  <header>
+    <div class="user-profile">
+      <img src="/avatar-placeholder.png" alt="User profile" class="avatar" />
+    </div>
+    <div class="notifications">
+      <span class="notification-icon">🔔</span>
+    </div>
+  </header>
+
+  <div class="balance-section">
+    <div class="balance">
+      <span class="currency">USD</span>
+      <h1>$298<span class="cents">.93</span></h1>
+      <p class="balance-label">Current balance</p>
+    </div>
+  </div>
+
+  <div class="instant-floats">
+    <h2>Instant floats</h2>
+    <p class="available">$100 available</p>
+    <button class="float-button">
+      <span class="check-icon">✓</span>
+      Float me cash
+      <span class="arrow">→</span>
+    </button>
+  </div>
+
+  <div class="income-spending">
+    <h2>Incomes & spendings</h2>
+    <div class="stats-grid">
+      <div class="stat-card spent">
+        <div class="stat-amount">$1845.81</div>
+        <div class="stat-label">Spent</div>
+      </div>
+      <div class="stat-card earned">
+        <div class="stat-amount">$1365.32</div>
+        <div class="stat-label">Earned</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="transactions">
+    <h2>Transactions</h2>
+    <div class="transaction-list">
+      <div class="transaction-item">
+        <div class="transaction-icon">🍔</div>
+        <div class="transaction-details">
+          <span class="transaction-name">Downtown Restaurant</span>
+          <span class="transaction-amount">$23.54</span>
+        </div>
+      </div>
+      <!-- Add more transactions as needed -->
+    </div>
+  </div>
+</div>
+
+<style>
+  .dashboard {
+    background-color: #000;
+    color: white;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .balance-section {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  .balance h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .cents {
+    font-size: 1.5rem;
+    opacity: 0.8;
+  }
+
+  .currency {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .balance-label {
+    color: #888;
+    margin: 0;
+  }
+
+  .instant-floats {
+    background: white;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .available {
+    color: #666;
+    margin: 0.5rem 0;
+  }
+
+  .float-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.1rem;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .check-icon {
+    background: black;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .stat-amount {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    color: #888;
+  }
+
+  .transaction-list {
+    margin-top: 1rem;
+  }
+
+  .transaction-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .transaction-icon {
+    font-size: 1.5rem;
+  }
+
+  .transaction-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+</style>
