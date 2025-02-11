@@ -1,12 +1,9 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 import AstroPWA from '@vite-pwa/astro';
 
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     AstroPWA({
-      registerType: 'autoUpdate',
       manifest: {
         name: 'Finance App',
         short_name: 'Finance',
@@ -32,11 +29,10 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: '/',
-        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}']
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,txt}']
       },
       devOptions: {
-        enabled: true,
-        navigateFallbackAllowlist: [/^\/$/]
+        enabled: true
       }
     })
   ]

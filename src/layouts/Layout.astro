@@ -21,6 +21,19 @@ import '../styles/fonts.css';
 		<!-- PWA icons -->
 		<link rel="apple-touch-icon" href="/pwa-192x192.png" />
 		<link rel="mask-icon" href="/logo.svg" color="#000000" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+		<!-- Sitemap -->
+		<meta name="msapplication-config" content="/browserconfig.xml" />
+
+		<!-- Worker and Manifest Registration -->
+		{
+		!import.meta.env.DEV && (
+			<script is:inline src="/registerSW.js"></script>
+			<link rel="manifest" href="/manifest.webmanifest" />
+		)
+		}
 	</head>
 	<body>
 		<slot />
